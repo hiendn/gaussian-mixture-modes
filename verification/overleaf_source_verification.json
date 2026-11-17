@@ -13,12 +13,10 @@
     "generated/r_results.tex": "b1afc0f717f68122424e3a25b17776d40f7b024c02b666906866ec8b56671361",
     "figures/triangle_modes.pdf": "87e24dc4f8a89f04a977898e147bb85385cfcc7918f01aeae33535145525745e"
   },
-  "verified_synced_file_count": 54,
+  "verified_synced_file_count": 59,
   "missing_ancillary_files": [],
-  "mismatched_files": [
-    "scripts/run_all.R",
-    "results/sessionInfo.txt"
-  ],
+  "mismatched_files": [],
   "local_XeLaTeX_build": "passed, 42 pages",
-  "fresh_online_Overleaf_compile_verified": false
+  "fresh_online_Overleaf_compile_verified": false,
+  "notes": "All 59 copied files were confirmed in a source archive downloaded from live Overleaf; the verification record itself describes that snapshot."
 }
