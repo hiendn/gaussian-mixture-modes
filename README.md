@@ -53,7 +53,7 @@ Each accepted fitting step retains its anchor, raw trial and accepted state. The
 
 The fixed-budget likelihood gains agree with the archived Python run to within `7e-8`. The native R joint-budget run is a separate computed step; its likelihood gain differs by about `1.7e-6`, and its certificate witnesses and proximal penalty also differ. The manuscript reports the native R values. Both joint-budget runs report `optimal_inaccurate`.
 
-All four R accepted states passed direct nonlinear feasibility, convex inner feasibility, physical-coordinate likelihood and ascent checks. An independent review recomputed these quantities without sourcing the fitting helpers. The fixed-density SDP agrees with its analytic value to about `1e-10`.
+All four R accepted states passed direct nonlinear feasibility, convex inner feasibility, physical-coordinate likelihood and ascent checks. The saved independent check script, `verification/independent_fit_check.R`, recomputes these quantities without sourcing the fitting helpers. It also runs as part of `scripts/verify.R`. The fixed-density SDP agrees with its analytic value to about `1e-10`.
 
 Exact rational certificates apply to the geometric examples. Fitted-state checks use floating-point arithmetic. CVXR did not expose a primal–dual gap for these runs, so the records mark it unavailable. Solver tolerances and a status flag do not establish a vanishing sequence of inner gaps. These bounded runs do not establish convergence of a longer trajectory or global likelihood optimality.
 

@@ -33,7 +33,7 @@ for directory in ('R','scripts','data','results','figures','legacy'):
         if p.is_file(): files[p]=str(p.relative_to(root))
 for p in (root/'manuscript/generated').glob('*.tex'): files[p]=str(Path('generated')/p.name)
 for p in (root/'verification').glob('*'):
-    if p.is_file() and p.suffix in ('.json','.md'): files[p]=str(Path('verification')/p.name)
+    if p.is_file() and p.suffix in ('.json','.md','.R'): files[p]=str(Path('verification')/p.name)
 record={}
 for src,rel in files.items():
     dst=target/rel; dst.parent.mkdir(parents=True,exist_ok=True)

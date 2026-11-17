@@ -52,3 +52,6 @@ report<-list(passed=TRUE,exact_geometric_sign_checks=31,accepted_fitting_states=
   scope="Saved states and reported computations only; no global optimum or asymptotic convergence certificate.")
 jsonlite::write_json(report,"verification/verification_results.json",auto_unbox=TRUE,pretty=TRUE,digits=17)
 cat("PASS: 31 exact geometry signs, four saved fit states, physical Gaussian likelihoods, proximal penalties and generated manuscript table.\n")
+
+# Recompute all nonlinear and inner constraints with independently written formulas.
+source("verification/independent_fit_check.R",local=new.env(parent=globalenv()))
