@@ -1,0 +1,85 @@
+--- first-draft/manuscript.tex
++++ R-update/manuscript.tex
+@@ -43,6 +43,8 @@
+ \author{Hien Duy Nguyen}
+ \date{First draft: 17 November 2026}
+ 
++\input{generated/r_results.tex}
++
+ \begin{document}
+ \maketitle
+ 
+@@ -524,7 +526,7 @@
+ 
+ \section{Numerical illustrations}\label{sec:examples}
+ 
+-The examples separate three sources of conservatism: summing curvature across directions, imposing one radius on all components, and using the full rank bound for every local configuration. All stated mode counts follow from the certificate. Numerical values illustrate the inequalities; the supplied code also contains interval or exact-sign checks for the strict geometric examples.
++The examples separate three sources of conservatism: summing curvature across directions, imposing one radius on all components, and using the full rank bound for every local configuration. All stated mode counts follow from the certificate. Numerical values illustrate the inequalities; the supplied R code also contains exact rational sign checks for the strict geometric examples.
+ 
+ \subsection{A matrix bound where the scalar trace bound fails}
+ 
+@@ -549,7 +551,7 @@
+ \begin{figure}[t]
+  \centering
+  \includegraphics[width=0.86\textwidth]{figures/triangle_modes.pdf}
+- \caption{The equal-weight Gaussian mixture with identity covariance and an equilateral configuration of side length $2.8$. Crosses mark component means, filled circles mark modes found by posterior-mean iteration, and dashed circles show the certified radius $0.68$. Density contours are evaluated directly from the mixture. The certificate, rather than the numerical root search, establishes that the three displayed modes are exhaustive.}
++ \caption{The equal-weight Gaussian mixture with identity covariance and an equilateral configuration of side length $2.8$. Crosses mark component means, filled circles mark modes found by posterior-mean iteration, and dashed circles show the certified radius $0.68$. Density contours are evaluated directly from the mixture in R. The certificate, rather than the numerical root search, establishes that the three displayed modes are exhaustive.}
+  \label{fig:triangle}
+ \end{figure}
+ \FloatBarrier
+@@ -598,31 +600,22 @@
+ \doublespacing
+ \caption{Per-observation gains in the log likelihood and EM auxiliary function for the fitting checks. The proximal penalty uses the same scale.}
+ \label{tab:steps}
+-\begin{tabular}{lrrr}
+-\toprule
+-Check & Log-likelihood gain & Auxiliary gain & Proximal penalty\\
+-\midrule
+-Fixed budget, step 1 & 0.05324942 & 0.05258166 & 0.01533710\\
+-Fixed budget, step 2 & 0.01714925 & 0.01650423 & 0.00568071\\
+-Fixed budget, step 3 & 0.00810428 & 0.00763955 & 0.00270686\\
+-Joint budget, one step & 0.12622616 & 0.12328409 & 0.00467152\\
+-\bottomrule
+-\end{tabular}
++\input{generated/fitting_table.tex}
+ \end{table}
+ 
+-All three fixed-budget problems passed the convexity check in CVXPY and returned the Clarabel status \texttt{optimal}. Direct evaluations of the exact nonlinear constraints were feasible at the retained points. The final weights were $(0.3988691,0.3450615,0.2560694)$ and the shared covariance was approximately
+-\[
+- \begin{pmatrix}0.9285898&-0.0575979\\-0.0575979&0.9254845\end{pmatrix}.
+-\]
+-The smallest tested matrix slack was about $2.3\times10^{-8}$. These are floating-point checks.
+-
+-The second computation uses the local-budget configuration above with $12$ deterministic observations and updates $M$ and $\nu$ jointly. It uses $\gamma=0.05$, $\kappa=25$, displacement trust radius $0.12$, log-odds trust radius $0.1$, and step fraction $0.999$. The proposed subproblem was convex. Clarabel returned \texttt{optimal\_inaccurate}; the retained point nevertheless passed the reported direct constraint checks, with maximum inner violation about $1.91\times10^{-14}$. The likelihood and auxiliary gains appear in Table~\ref{tab:steps}. The covariance changed from $I_2$ to approximately
+-\[
+- \begin{pmatrix}0.7563411&0.0003454\\0.0003454&0.9661039\end{pmatrix},
++All three fixed-budget problems passed the convexity check in CVXR and returned the Clarabel status \texttt{optimal}. Direct evaluations of the exact nonlinear constraints were feasible at the retained points. The final weights were $\RFixedWeights$ and the shared covariance was approximately
++\[
++ \RFixedCovariance.
++\]
++The smallest tested matrix slack was about $\RFixedMatrixSlack$. These are floating-point checks.
++
++The second computation uses the local-budget configuration above with $12$ deterministic observations and updates $M$ and $\nu$ jointly. It uses $\gamma=0.05$, $\kappa=25$, displacement trust radius $0.12$, log-odds trust radius $0.1$, and step fraction $0.999$. The proposed subproblem was convex. Clarabel returned \texttt{optimal\_inaccurate}; the retained point nevertheless passed the reported direct constraint checks, with maximum inner violation about $\RJointViolation$. The likelihood and auxiliary gains appear in Table~\ref{tab:steps}. The covariance changed from $I_2$ to approximately
++\[
++ \RJointCovariance,
+ \]
+ and both budget matrices and budget values changed. This is a one-step implementation check, not a verification of the asymptotic inner-gap condition in Theorem~\ref{thm:MM}.
+ 
+-The accompanying material contains the code, observations, and recorded numerical checks. The computations used CVXPY~1.9.3 and Clarabel~0.11.1. They provide numerical evidence of implementability and feasible ascent for the reported instances. Comparative accuracy and computational scaling require a larger empirical study.
++The accompanying material contains the native R implementation, observations, and complete accepted and trial states, including all certificate witnesses. The reported fitting computations used R~\RVersion, CVXR~\RCVXRVersion, and Clarabel~\RClarabelVersion. The earlier Python calculations are retained separately for comparison. Solver status and requested tolerances are recorded; the R interface did not expose a primal--dual gap for these runs. These calculations provide numerical evidence of implementability and feasible ascent for the reported instances. Comparative accuracy and computational scaling require a larger empirical study.
+ 
+ \section{Discussion}\label{sec:discussion}
+ 
+@@ -969,10 +962,10 @@
+ 
+ 
+ \section*{Data availability}
+-The data used in the fitting illustrations are generated or deterministic. The accompanying material contains the 96-observation data file, the script constructing the twelve-observation example, and the recorded numerical results.
++The data used in the fitting illustrations are generated or deterministic. The 96-observation data file, the twelve deterministic observations, and the recorded numerical results are available at \url{https://github.com/hiendn/gaussian-mixture-modes}. The R implementation reads the supplied 96-observation file rather than regenerating it with a different random-number generator.
+ 
+ \section*{Code availability}
+-Python implementations of the geometric checks, convex fitting examples, and figure generation are included in the accompanying code archive.
++Native R implementations of the geometric checks, convex fitting examples, and figure generation are available at \url{https://github.com/hiendn/gaussian-mixture-modes}. The script \texttt{scripts/run\_all.R} generates the numerical records, graphics, and fitting-table entries. Exact geometric sign checks use rational arithmetic; fitted-point checks use floating-point arithmetic. The repository also preserves the original Python code and its saved results.
+ 
+ \input{references.tex}
+ \end{document}

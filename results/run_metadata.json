@@ -1,0 +1,13 @@
+{
+  "R": "4.4.0",
+  "packages": {
+    "CVXR": "1.8.1",
+    "clarabel": "0.11.2",
+    "jsonlite": "1.8.8",
+    "gmp": "0.7.5",
+    "Matrix": "1.7.0",
+    "S7": "0.2.1"
+  },
+  "elapsed_seconds": 12.244000000000002,
+  "scope": "Three fixed-budget steps and one joint-budget step; no convergence or global optimality diagnosis."
+}

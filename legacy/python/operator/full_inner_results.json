@@ -1,0 +1,582 @@
+{
+  "scope": "Three nonsymmetric full-triangular-whitener convex-inner steps; no stationarity or global-argmax diagnosis.",
+  "versions": {
+    "cvxpy": "1.9.3",
+    "clarabel": "0.11.1",
+    "numpy": "2.5.5"
+  },
+  "settings": {
+    "n": 96,
+    "p": 2,
+    "K": 3,
+    "q": 2,
+    "nu": 2.0,
+    "M": "identity",
+    "beta": 0.99,
+    "tau": 0.01,
+    "proximal_gamma": 0.15,
+    "matrix_majorant_scale": 25.0,
+    "fitting_steps": 3,
+    "seed": 2026111701,
+    "solver_tolerances": {
+      "tol_gap_abs": 1e-09,
+      "tol_gap_rel": 1e-09,
+      "tol_feas": 1e-09,
+      "max_iter": 250
+    },
+    "scalar_invariance_constraint_imposed": false
+  },
+  "initial_log_likelihood_per_observation": -3.5763216122805046,
+  "initial_checks": {
+    "separation": 0.042340484429066017,
+    "odds_epigraph": -5.551115123125783e-17,
+    "lambda_psd": 0.009981481544987625,
+    "first_lifted_matrix": 0.005361906172895892,
+    "first_actual_matrix": 0.005361906172895739,
+    "second_matrix": 0.04305047412715852,
+    "automatic_invariance": 0.014598767852535,
+    "dominance_bound": 0.1808568116507422,
+    "min_weight": 0.3333333333333333,
+    "weights": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "radii": [
+      0.68,
+      0.68,
+      0.68
+    ],
+    "minimum_local_distances": [
+      2.8,
+      2.8,
+      2.8
+    ],
+    "S": [
+      0.266374299201141,
+      0.2663742992011413,
+      0.266374299201141
+    ],
+    "minimum_B_diagonal": 1.0
+  },
+  "steps": [
+    {
+      "solver_status": "optimal",
+      "solver_iterations": 18,
+      "solver_reported_seconds": 0.015588371,
+      "canonicalisation_seconds": 0.1156128879993048,
+      "solve_wall_seconds": 0.01920181600144133,
+      "dcp_verified": true,
+      "size": {
+        "independent_model_coordinates": 44,
+        "cvxpy_scalar_variables": 52,
+        "cvxpy_scalar_equalities": 2,
+        "cvxpy_scalar_inequalities": 42,
+        "canonical_variables": 695,
+        "canonical_rows": 883,
+        "canonical_A_nonzeros": 2741,
+        "zero_cone_dim": 630,
+        "nonnegative_cone_dim": 52,
+        "exp_cones": 11,
+        "soc_orders": [
+          3,
+          4,
+          3,
+          3,
+          4,
+          3,
+          3,
+          4,
+          3
+        ],
+        "psd_orders": [
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          7,
+          7,
+          7
+        ]
+      },
+      "retained_step_fraction": 0.999,
+      "log_likelihood_per_observation": -3.523072192544462,
+      "log_likelihood_increase_per_observation": 0.05324941973604247,
+      "EM_auxiliary_increase_per_observation": 0.052581664053861665,
+      "proximal_penalty": 0.015337104829272103,
+      "exact_checks": {
+        "separation": 0.01818460893207785,
+        "odds_epigraph": 0.0008914609419012481,
+        "lambda_psd": 1.007016411813666e-05,
+        "first_lifted_matrix": 0.004679408716026304,
+        "first_actual_matrix": 0.012868980768133323,
+        "second_matrix": 4.460463981997842e-05,
+        "automatic_invariance": 0.011048863771369932,
+        "dominance_bound": 0.1665692804806392,
+        "min_weight": 0.2947645624178594,
+        "weights": [
+          0.3753311617885901,
+          0.3299042757935503,
+          0.2947645624178594
+        ],
+        "radii": [
+          0.679999998861935,
+          0.6357250532266321,
+          0.640469255243578
+        ],
+        "minimum_local_distances": [
+          2.8834086731431987,
+          2.8989406302940215,
+          2.8834086731431987
+        ],
+        "S": [
+          0.16397327275276893,
+          0.17133337408702015,
+          0.23360246618706557
+        ],
+        "minimum_B_diagonal": 1.0096709403128374
+      },
+      "inner_checks": {
+        "separation": 1.5446855569312135e-05,
+        "odds_epigraph": 1.9657013711205096e-07,
+        "first_matrix": 1.6033297653372802e-05
+      },
+      "B": [
+        [
+          1.0096834446332201,
+          0.05962015523169899
+        ],
+        [
+          3.3526397852733202e-15,
+          1.0096709403128374
+        ]
+      ],
+      "whitened_means": [
+        [
+          1.8017751158253579,
+          -0.09800774614257217
+        ],
+        [
+          -0.741089913003806,
+          1.4772352338120494
+        ],
+        [
+          -0.7598710672341682,
+          -1.4216445577997505
+        ]
+      ],
+      "logits": [
+        0.24163179017671635,
+        0.11262559483335066,
+        -1.3916138590113964e-14
+      ],
+      "step": 1
+    },
+    {
+      "solver_status": "optimal",
+      "solver_iterations": 20,
+      "solver_reported_seconds": 0.006015986,
+      "canonicalisation_seconds": 0.13579022399972018,
+      "solve_wall_seconds": 0.009018987999297678,
+      "dcp_verified": true,
+      "size": {
+        "independent_model_coordinates": 44,
+        "cvxpy_scalar_variables": 52,
+        "cvxpy_scalar_equalities": 2,
+        "cvxpy_scalar_inequalities": 42,
+        "canonical_variables": 695,
+        "canonical_rows": 883,
+        "canonical_A_nonzeros": 2741,
+        "zero_cone_dim": 630,
+        "nonnegative_cone_dim": 52,
+        "exp_cones": 11,
+        "soc_orders": [
+          3,
+          4,
+          3,
+          3,
+          4,
+          3,
+          3,
+          4,
+          3
+        ],
+        "psd_orders": [
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          7,
+          7,
+          7
+        ]
+      },
+      "retained_step_fraction": 0.999,
+      "log_likelihood_per_observation": -3.5059229443698894,
+      "log_likelihood_increase_per_observation": 0.01714924817457275,
+      "EM_auxiliary_increase_per_observation": 0.016504231666661484,
+      "proximal_penalty": 0.005680706439658731,
+      "exact_checks": {
+        "separation": 0.0005615756896997226,
+        "odds_epigraph": 0.000354891307914558,
+        "lambda_psd": 3.994577651988962e-08,
+        "first_lifted_matrix": 0.0027956134155943807,
+        "first_actual_matrix": 0.005937879955071168,
+        "second_matrix": 5.733948033048719e-08,
+        "automatic_invariance": 0.00881789893687468,
+        "dominance_bound": 0.16298707903295911,
+        "min_weight": 0.271579597543278,
+        "weights": [
+          0.39202721823345593,
+          0.33639318422326603,
+          0.271579597543278
+        ],
+        "radii": [
+          0.6799999984937909,
+          0.6043446701276111,
+          0.6150789679539167
+        ],
+        "minimum_local_distances": [
+          2.9460103332339522,
+          2.9751904631414803,
+          2.9460103332339522
+        ],
+        "S": [
+          0.1248970450300001,
+          0.12052726912215478,
+          0.2076579615435193
+        ],
+        "minimum_B_diagonal": 1.0270119762334122
+      },
+      "inner_checks": {
+        "separation": 6.898678278410841e-06,
+        "odds_epigraph": 2.0902470479200463e-06,
+        "first_matrix": 1.1017636906557327e-05
+      },
+      "B": [
+        [
+          1.0283299844745302,
+          0.06878362686274242
+        ],
+        [
+          -1.0283320018714115e-15,
+          1.0270119762334122
+        ]
+      ],
+      "whitened_means": [
+        [
+          1.8896294773888143,
+          -0.14747735513454582
+        ],
+        [
+          -0.715184919198572,
+          1.532356422125484
+        ],
+        [
+          -0.7564562157578739,
+          -1.4425477733148213
+        ]
+      ],
+      "logits": [
+        0.3670759982880276,
+        0.21402539360288075,
+        1.91347546517022e-16
+      ],
+      "step": 2
+    },
+    {
+      "solver_status": "optimal",
+      "solver_iterations": 17,
+      "solver_reported_seconds": 0.006080111,
+      "canonicalisation_seconds": 0.10481495000021823,
+      "solve_wall_seconds": 0.00912311300089641,
+      "dcp_verified": true,
+      "size": {
+        "independent_model_coordinates": 44,
+        "cvxpy_scalar_variables": 52,
+        "cvxpy_scalar_equalities": 2,
+        "cvxpy_scalar_inequalities": 42,
+        "canonical_variables": 695,
+        "canonical_rows": 883,
+        "canonical_A_nonzeros": 2741,
+        "zero_cone_dim": 630,
+        "nonnegative_cone_dim": 52,
+        "exp_cones": 11,
+        "soc_orders": [
+          3,
+          4,
+          3,
+          3,
+          4,
+          3,
+          3,
+          4,
+          3
+        ],
+        "psd_orders": [
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          7,
+          7,
+          7
+        ]
+      },
+      "retained_step_fraction": 0.999,
+      "log_likelihood_per_observation": -3.4978186683524872,
+      "log_likelihood_increase_per_observation": 0.008104276017402157,
+      "EM_auxiliary_increase_per_observation": 0.007639548202089674,
+      "proximal_penalty": 0.002706863648507587,
+      "exact_checks": {
+        "separation": 0.00018122472086901098,
+        "odds_epigraph": 0.0001578871180978464,
+        "lambda_psd": 2.311673197308295e-08,
+        "first_lifted_matrix": 0.0018846962797171157,
+        "first_actual_matrix": 0.003424237785513304,
+        "second_matrix": 5.715076731305224e-07,
+        "automatic_invariance": 0.008259818988893497,
+        "dominance_bound": 0.16330280633664573,
+        "min_weight": 0.25606935848033613,
+        "weights": [
+          0.3988691086499924,
+          0.34506153286967156,
+          0.25606935848033613
+        ],
+        "radii": [
+          0.6799999975976104,
+          0.5832395600146756,
+          0.5962505392830604
+        ],
+        "minimum_local_distances": [
+          2.9985684015233147,
+          3.0380570712201886,
+          2.9985684015233147
+        ],
+        "S": [
+          0.10508337534229262,
+          0.09247854691013277,
+          0.18553023964105353
+        ],
+        "minimum_B_diagonal": 1.0394782752956095
+      },
+      "inner_checks": {
+        "separation": 2.987752732774851e-06,
+        "odds_epigraph": 1.1261074042007158e-06,
+        "first_matrix": 7.093551282214006e-06
+      },
+      "B": [
+        [
+          1.039747569793399,
+          0.06470908431447167
+        ],
+        [
+          -2.4010701673233328e-15,
+          1.0394782752956095
+        ]
+      ],
+      "whitened_means": [
+        [
+          1.933795338307112,
+          -0.17169631926827317
+        ],
+        [
+          -0.7113063430537003,
+          1.5614323169235875
+        ],
+        [
+          -0.766180117311026,
+          -1.4761291453170942
+        ]
+      ],
+      "logits": [
+        0.44318497522587924,
+        0.2982744179237232,
+        1.0185992722304803e-15
+      ],
+      "step": 3
+    }
+  ],
+  "total_log_likelihood_increase_per_observation": 0.07850294392801738,
+  "final_shared_covariance": [
+    [
+      0.9285898215114884,
+      -0.05759788096394211
+    ],
+    [
+      -0.05759788096394211,
+      0.9254845342343565
+    ]
+  ],
+  "final_original_coordinate_means": [
+    [
+      1.8701497831043081,
+      -0.16517547634118782
+    ],
+    [
+      -0.7776001349889414,
+      1.502130784291323
+    ],
+    [
+      -0.6485120811218327,
+      -1.4200673360848357
+    ]
+  ],
+  "fixed_density_sdp": {
+    "solver_status": "optimal",
+    "sdp_value": 0.9766646530102299,
+    "analytic_value": 0.9766646528854819,
+    "absolute_difference": 1.2474798971595646e-10,
+    "radius_zero_tau": 0.6754466071825114,
+    "value_zero_tau": 0.9694515328206245,
+    "radius_min_tau_01": 0.6763083930525966,
+    "value_min_tau_01": 0.9708166098384177,
+    "radius_used_for_rational_witness": 0.68,
+    "value_at_068": 0.9766646528854819,
+    "theoretical_status": "The analytic value is the proved SDP optimum in the stated symmetric regime; solver agreement is a numerical check."
+  },
+  "final_lift": {
+    "B": [
+      [
+        1.039747569793399,
+        0.06470908431447167
+      ],
+      [
+        -2.4010701673233328e-15,
+        1.0394782752956095
+      ]
+    ],
+    "v": [
+      [
+        1.933795338307112,
+        -0.17169631926827317
+      ],
+      [
+        -0.7113063430537003,
+        1.5614323169235875
+      ],
+      [
+        -0.766180117311026,
+        -1.4761291453170942
+      ]
+    ],
+    "alpha": [
+      0.44318497522587924,
+      0.2982744179237232,
+      1.0185992722304803e-15
+    ],
+    "r": [
+      0.6799999975976104,
+      0.5832395600146756,
+      0.5962505392830604
+    ],
+    "c": [
+      [
+        -0.7652507282512621,
+        0.06265207712486319
+      ],
+      [
+        0.4362983989355073,
+        -0.731558269623596
+      ],
+      [
+        0.2862293981381117,
+        0.6297297155353655
+      ]
+    ],
+    "a": [
+      0.06930601194933142,
+      0.07621124652178568,
+      0.049436184949042054,
+      0.043386410748082416,
+      0.10414481746775255,
+      0.08194032414427273
+    ],
+    "lam": [
+      [
+        [
+          2.747768908894998,
+          -2.710939250162619
+        ],
+        [
+          -2.710939250162619,
+          2.7042940324471476
+        ]
+      ],
+      [
+        [
+          2.7547039671206437,
+          2.6979305153567408
+        ],
+        [
+          2.6979305153567408,
+          2.7001237060478043
+        ]
+      ],
+      [
+        [
+          5.0941346327506345,
+          -1.4402407162454933
+        ],
+        [
+          -1.4402407162454933,
+          0.5076442738825889
+        ]
+      ],
+      [
+        [
+          0.3618665938053203,
+          1.3502825329559422
+        ],
+        [
+          1.3502825329559422,
+          5.038543437136841
+        ]
+      ],
+      [
+        [
+          5.02228072874238,
+          1.3202576398085335
+        ],
+        [
+          1.3202576398085335,
+          0.34706947973239044
+        ]
+      ],
+      [
+        [
+          0.40135097635331024,
+          -1.2717603910073196
+        ],
+        [
+          -1.2717603910073196,
+          5.189459770947533
+        ]
+      ]
+    ]
+  }
+}

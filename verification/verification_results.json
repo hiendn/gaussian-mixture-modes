@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "exact_geometric_sign_checks": 31,
+  "accepted_fitting_states": 4,
+  "physical_coordinate_checks": [
+    {
+      "check": "fixed_1",
+      "physical_likelihood_error": 4.4408920985006262e-16,
+      "penalty_error": 0
+    },
+    {
+      "check": "fixed_2",
+      "physical_likelihood_error": 0,
+      "penalty_error": 0
+    },
+    {
+      "check": "fixed_3",
+      "physical_likelihood_error": 8.8817841970012523e-16,
+      "penalty_error": 0
+    },
+    {
+      "check": "joint_1",
+      "physical_likelihood_error": 0,
+      "penalty_error": 0
+    }
+  ],
+  "maximum_fixed_gain_difference_from_original_python": 6.4456508575005955e-08,
+  "joint_gain_difference_from_original_python": -1.7140931789505487e-06,
+  "joint_penalty_difference_from_original_python": 0.00011965538858792809,
+  "scope": "Saved states and reported computations only; no global optimum or asymptotic convergence certificate."
+}

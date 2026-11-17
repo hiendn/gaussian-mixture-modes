@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-17",
+  "method": "Downloaded source archive from the existing signed-in live Overleaf project",
+  "core_manuscript_files_verified": [
+    "manuscript.tex",
+    "generated/fitting_table.tex",
+    "generated/r_results.tex",
+    "figures/triangle_modes.pdf"
+  ],
+  "core_file_hashes": {
+    "manuscript.tex": "12142f5cce00ddd5f66f3ae01a53d614c5121f87b0afa9f4f8753e74047f1357",
+    "generated/fitting_table.tex": "e2dfaa8abaa8c1541427200ff8ce3451d345d034603fe136b46e84014a6b4501",
+    "generated/r_results.tex": "b1afc0f717f68122424e3a25b17776d40f7b024c02b666906866ec8b56671361",
+    "figures/triangle_modes.pdf": "87e24dc4f8a89f04a977898e147bb85385cfcc7918f01aeae33535145525745e"
+  },
+  "verified_synced_file_count": 54,
+  "missing_ancillary_files": [],
+  "mismatched_files": [
+    "scripts/run_all.R",
+    "results/sessionInfo.txt"
+  ],
+  "local_XeLaTeX_build": "passed, 42 pages",
+  "fresh_online_Overleaf_compile_verified": false
+}

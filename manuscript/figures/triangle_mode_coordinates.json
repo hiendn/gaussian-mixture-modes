@@ -1,0 +1,11 @@
+{
+  "modes": [
+    [0.10661986421519906, 0.061557007305606558],
+    [2.6933801357848011, 0.061557007305606558],
+    [1.3999999999999999, 2.301757115985215]
+  ],
+  "residuals": [1.5494877917949976e-15, 1.5118669935703277e-15, 1.3322676295501878e-15],
+  "iterations": [25, 25, 25],
+  "maximum_log_density_hessian_eigenvalues": [-0.71662144079112933, -0.71662144079112944, -0.71662144079112922],
+  "scope": "Modes located from component means only; exhaustiveness is supplied by the manuscript certificate."
+}

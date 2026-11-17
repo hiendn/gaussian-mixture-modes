@@ -1,0 +1,12 @@
+{
+  "physical_log_likelihood_per_observation": -3.4978186683524872,
+  "reported_log_likelihood_per_observation": -3.4978186683524872,
+  "absolute_log_likelihood_discrepancy": 0.0,
+  "minimum_first_matrix_slack": 0.0034242377855130957,
+  "minimum_second_matrix_slack": 5.715076731305224e-07,
+  "minimum_multiplier_eigenvalue": 2.311673197308295e-08,
+  "minimum_squared_separation_slack": 0.00018122472086901098,
+  "minimum_odds_epigraph_slack": 0.0001578871180978464,
+  "method": "Independent physical-coordinate Gaussian log densities and direct final matrix inequalities",
+  "new_optimisation_runs": 0
+}

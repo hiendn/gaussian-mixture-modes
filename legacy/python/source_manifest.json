@@ -1,0 +1,67 @@
+[
+  {
+    "file": "code/geometry/check_geometry.py",
+    "source": "output/gaussian_modes_resolution_20261117/coverage/check_geometry.py",
+    "sha256": "22a289f090472a2739e340b9138bd84534c680f17e8d02bb779bd95f3d7ba315"
+  },
+  {
+    "file": "code/geometry/geometry_checks.json",
+    "source": "output/gaussian_modes_resolution_20261117/coverage/geometry_checks.json",
+    "sha256": "0e754d2e9bae6d52184668e9faf2ab08ba7cfcc73ae8c2ee262c4e8022d472fd"
+  },
+  {
+    "file": "code/geometry/rigorous_geometry_checks.py",
+    "source": "output/gaussian_modes_resolution_20261117/coverage/rigorous_geometry_checks.py",
+    "sha256": "3599c417251f73486f7e197a8c0347ef49db1e79f32fcb7ee03b8d5101d7d1cf"
+  },
+  {
+    "file": "code/geometry/rigorous_geometry_checks.json",
+    "source": "output/gaussian_modes_resolution_20261117/coverage/rigorous_geometry_checks.json",
+    "sha256": "558be6d7fc5aad873871aef56a767bf9763e97f5af73277061255f286cf53a7b"
+  },
+  {
+    "file": "code/operator/check_operator.py",
+    "source": "output/gaussian_modes_resolution_20261117/operator/check_operator.py",
+    "sha256": "4893e67e85c378cf874eaa07be97133a1f92f6188a74934ddf121567b7e445e4"
+  },
+  {
+    "file": "code/operator/operator_checks.json",
+    "source": "output/gaussian_modes_resolution_20261117/operator/operator_checks.json",
+    "sha256": "c8aee60e04d42d800a79d788ccc7d58d539cbd7d851eb451fe0dcec4fa468e98"
+  },
+  {
+    "file": "code/operator/full_inner_conic.py",
+    "source": "output/gaussian_modes_resolution_20261117/operator/full_inner_conic.py",
+    "sha256": "7bdb00042c76c3ac9782d05604faf7886f75067ac25a355ebd3a1480808d0582"
+  },
+  {
+    "file": "code/operator/full_inner_data.csv",
+    "source": "output/gaussian_modes_resolution_20261117/operator/full_inner_data.csv",
+    "sha256": "048e809f45efa33787192f6b0e382fade2dc2471a72269149371e80b562abd87"
+  },
+  {
+    "file": "code/operator/full_inner_results.json",
+    "source": "output/gaussian_modes_resolution_20261117/operator/full_inner_results.json",
+    "sha256": "335ca6b497266ba04020406ce144dec92e4aa3842b29c7d2dbf6fe60f2fe9ec8"
+  },
+  {
+    "file": "code/joint_budget/check_joint_budget_step.py",
+    "source": "output/gaussian_modes_convergence_20261117/checks/check_joint_budget_step.py",
+    "sha256": "7b736a32b0162d60c6b31d669bb4dd28b483ed3a627f7ea4bf3efab30883505e"
+  },
+  {
+    "file": "code/joint_budget/joint_budget_step_check.json",
+    "source": "output/gaussian_modes_convergence_20261117/checks/joint_budget_step_check.json",
+    "sha256": "69c6978154b3d1f5c336f91056f5a59a86cc41345395cb299317093fcd82ef48"
+  },
+  {
+    "file": "code/validate_final_fit.py",
+    "source": "output/gaussian_modes_resolution_20261117/validate_final_fit.py",
+    "sha256": "021ebb39c823f3ff3194fa2e82b689f7b4671587d5ce8542c0864ca80f7f6279"
+  },
+  {
+    "file": "code/final_fit_validation.json",
+    "source": "output/gaussian_modes_resolution_20261117/final_fit_validation.json",
+    "sha256": "a963af3f4d16b2fc135e67a61440ca3f90073a33d05cc34784991421c721f5cb"
+  }
+]
